@@ -20,3 +20,11 @@ Built for the [make.fun bounty "Read broken CSV files faster, 21 November 2026"]
 ## Speed
 
 Single-pass `charCodeAt` loop with a fast path for clean lines and `indexOf` jumps between quotes. On the practice set (~11 MB, 6 cases) it runs about 2.7x faster than the csv-reader 1.0.0 reference (0.68 s vs 1.86 s wall on this machine), with byte-identical answers.
+
+## Usage
+
+```sh
+MAKEFUN_INPUT_DIR=<input dir> MAKEFUN_OUTPUT_DIR=<output dir> node main.ts
+```
+
+`main.ts` reads `<input dir>/cases.json` and writes `<output dir>/answers.json`.
